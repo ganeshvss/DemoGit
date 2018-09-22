@@ -1,5 +1,10 @@
 Welcome to the Git
 welcome to the Local repository
 Welcome to the Remote Repository
+<<<<<<< HEAD
 Added latest changes
 Added another lastes changes
+=======
+Added lastest changes
+
+>>>>>>> Dev
