@@ -1,0 +1,71 @@
+
+PS D:\CHEF\chef-starter\chef-repo\cookbooks> knife bootstrap 18.212.26.0 --sudo -x ubuntu -i C:\Users\GANESH\Downloads\awskey.pem -N testnode
+Node testnode exists, overwrite it? (Y/N) y
+Client testnode exists, overwrite it? (Y/N) y
+Creating new client for testnode
+Creating new node for testnode
+Connecting to 18.212.26.0
+18.212.26.0 -----> Installing Chef Omnibus (-v 14)
+18.212.26.0 downloading https://omnitruck-direct.chef.io/chef/install.sh
+18.212.26.0   to file /tmp/install.sh.2549/install.sh
+18.212.26.0 trying wget...
+18.212.26.0 ubuntu 18.04 x86_64
+18.212.26.0 Getting information for chef stable 14 for ubuntu...
+18.212.26.0 downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=14&p=ubuntu&pv=18.04&m=x86_64
+18.212.26.0   to file /tmp/install.sh.2553/metadata.txt
+18.212.26.0 trying wget...
+18.212.26.0 sha1        bdfe531a10aa796cc7b1e20e01cfb1d8cc873de7
+18.212.26.0 sha256      6d699fb7da8eaeb09c385fc6b65401fa8160b7714f8b4bce2fb558a76070fa31
+18.212.26.0 url https://packages.chef.io/files/stable/chef/14.5.33/ubuntu/18.04/chef_14.5.33-1_amd64.deb
+18.212.26.0 version     14.5.33
+18.212.26.0 downloaded metadata file looks valid...
+18.212.26.0 downloading https://packages.chef.io/files/stable/chef/14.5.33/ubuntu/18.04/chef_14.5.33-1_amd64.deb
+18.212.26.0   to file /tmp/install.sh.2553/chef_14.5.33-1_amd64.deb
+18.212.26.0 trying wget...
+18.212.26.0 Comparing checksum with sha256sum...
+18.212.26.0 Installing chef 14
+18.212.26.0 installing with dpkg...
+18.212.26.0 Selecting previously unselected package chef.
+(Reading database ... 57082 files and directories currently installed.)
+18.212.26.0 Preparing to unpack .../chef_14.5.33-1_amd64.deb ...
+18.212.26.0 Unpacking chef (14.5.33-1) ...
+18.212.26.0 Setting up chef (14.5.33-1) ...
+18.212.26.0 Thank you for installing Chef!
+18.212.26.0 Starting the first Chef Client run...
+18.212.26.0 Starting Chef Client, version 14.5.33
+18.212.26.0 resolving cookbooks for run list: []
+18.212.26.0 Synchronizing Cookbooks:
+18.212.26.0 Installing Cookbook Gems:
+18.212.26.0 Compiling Cookbooks...
+18.212.26.0 [2018-09-29T10:21:04+00:00] WARN: Node testnode has an empty run list.
+18.212.26.0 Converging 0 resources
+18.212.26.0
+18.212.26.0 Running handlers:
+18.212.26.0 Running handlers complete
+18.212.26.0 Chef Client finished, 0/0 resources updated in 02 seconds
+PS D:\CHEF\chef-starter\chef-repo\cookbooks>
+
+--------------------------------------------------------------bootstrap with recepe--------------------
+PS D:\CHEF\chef-starter\chef-repo\cookbooks> knife bootstrap 18.212.26.0 --sudo -x ubuntu -i C:\Users\GANESH\Downloads\awskey.pem -N ganesh -r "recipe[testcb]"
+Node ganesh exists, overwrite it? (Y/N) y
+Client ganesh exists, overwrite it? (Y/N) y
+Creating new client for ganesh
+Creating new node for ganesh
+Connecting to 18.212.26.0
+18.212.26.0 -----> Existing Chef installation detected
+18.212.26.0 Starting the first Chef Client run...
+18.212.26.0 Starting Chef Client, version 14.5.33
+18.212.26.0 resolving cookbooks for run list: ["testcb"]
+18.212.26.0 Synchronizing Cookbooks:
+18.212.26.0   - testcb (0.1.0)
+18.212.26.0 Installing Cookbook Gems:
+18.212.26.0 Compiling Cookbooks...
+18.212.26.0 Converging 1 resources
+18.212.26.0 Recipe: testcb::default
+18.212.26.0   * file[/home/ubuntu/test.txt] action create
+18.212.26.0     - create new file /home/ubuntu/test.txt
+18.212.26.0
+18.212.26.0 Running handlers:
+18.212.26.0 Running handlers complete
+18.212.26.0 Chef Client finished, 1/1 resources updated in 01 seconds
+PS D:\CHEF\chef-starter\chef-repo\cookbooks>
