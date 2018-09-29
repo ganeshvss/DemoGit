@@ -1,0 +1,41 @@
+PS D:\CHEF\chef-starter\chef-repo\cookbooks> knife bootstrap 52.23.242.174 --sudo -x ec2-user -i C:\Users\GANESH\Downloads\awskey_raja.pem -N raja
+Creating new client for raja
+Creating new node for raja
+Connecting to 52.23.242.174
+52.23.242.174 -----> Installing Chef Omnibus (-v 14)
+52.23.242.174 downloading https://omnitruck-direct.chef.io/chef/install.sh
+52.23.242.174   to file /tmp/install.sh.3269/install.sh
+52.23.242.174 trying wget...
+52.23.242.174 amazon 2 x86_64
+52.23.242.174 Getting information for chef stable 14 for amazon...
+52.23.242.174 downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=14&p=amazon&pv=2&m=x86_64
+52.23.242.174   to file /tmp/install.sh.3274/metadata.txt
+52.23.242.174 trying wget...
+52.23.242.174 sha1      3997daaa81c2ff78cc490973d50181e5f9a08d77
+52.23.242.174 sha256    711ed28d1bdfd385d83349d64e480bf76550ad8a69e0f72dc99209e1fae63321
+52.23.242.174 url       https://packages.chef.io/files/stable/chef/14.5.33/el/7/chef-14.5.33-1.el7.x86_64.rpm
+52.23.242.174 version   14.5.33
+52.23.242.174 downloaded metadata file looks valid...
+52.23.242.174 downloading https://packages.chef.io/files/stable/chef/14.5.33/el/7/chef-14.5.33-1.el7.x86_64.rpm
+52.23.242.174   to file /tmp/install.sh.3274/chef-14.5.33-1.el7.x86_64.rpm
+52.23.242.174 trying wget...
+52.23.242.174 Comparing checksum with sha256sum...
+52.23.242.174 Installing chef 14
+52.23.242.174 installing with rpm...
+52.23.242.174 warning: /tmp/install.sh.3274/chef-14.5.33-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+52.23.242.174 Preparing...                          ################################# [100%]
+52.23.242.174 Updating / installing...
+52.23.242.174    1:chef-14.5.33-1.el7               ################################# [100%]
+52.23.242.174 Thank you for installing Chef!
+52.23.242.174 Starting the first Chef Client run...
+52.23.242.174 Starting Chef Client, version 14.5.33
+52.23.242.174 resolving cookbooks for run list: []
+52.23.242.174 Synchronizing Cookbooks:
+52.23.242.174 Installing Cookbook Gems:
+52.23.242.174 Compiling Cookbooks...
+52.23.242.174 [2018-09-29T12:37:24+00:00] WARN: Node raja has an empty run list.
+52.23.242.174 Converging 0 resources
+52.23.242.174
+52.23.242.174 Running handlers:
+52.23.242.174 Running handlers complete
+52.23.242.174 Chef Client finished, 0/0 resources updated in 01 seconds
